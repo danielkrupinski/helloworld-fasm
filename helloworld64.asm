@@ -5,7 +5,7 @@ include 'win64a.inc'
 
 section '.text' code executable
 main:
-    push hello
+    lea ecx, [hello]
     cinvoke printf
     cinvoke getchar
     push 0
