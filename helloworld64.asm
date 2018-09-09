@@ -5,10 +5,10 @@ include 'win64a.inc'
 
 section '.text' code executable
 main:
-    lea ecx, [hello]
+    lea rcx, [hello]
     cinvoke printf
     cinvoke getchar
-    xor ecx, ecx
+    xor rcx, rcx
     invoke ExitProcess
 
 section '.rdata' data readable
