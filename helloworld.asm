@@ -6,10 +6,10 @@ include 'win32a.inc'
 section '.text' code executable
 main:
         push hello
-        cinvoke [printf]
-        cinvoke [getchar]
+        cinvoke printf
+        cinvoke getchar
         push 0
-        invoke [ExitProcess]
+        invoke ExitProcess
 
 section '.rdata' data readable
        hello db 'Hello world!', 10, 0
