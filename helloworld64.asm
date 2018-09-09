@@ -1,7 +1,7 @@
 format PE64 console
 entry main
 
-include 'win32a.inc'
+include 'win64a.inc'
 
 section '.text' code executable
 main:
