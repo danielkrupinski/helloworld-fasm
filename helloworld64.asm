@@ -8,7 +8,7 @@ main:
     lea ecx, [hello]
     cinvoke printf
     cinvoke getchar
-    push 0
+    xor ecx, ecx
     invoke ExitProcess
 
 section '.rdata' data readable
