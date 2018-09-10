@@ -6,15 +6,9 @@ include 'win32ax.inc'
 section '.text' code executable
 
 main:
-    push hello
-    cinvoke printf
+    cinvoke printf, <'Hello world!', 10, 0>
     cinvoke getchar
-    push 0
-    invoke ExitProcess
-
-section '.rdata' data readable
-
-hello db 'Hello world!', 10, 0
+    invoke ExitProcess, 0
 
 section '.idata' data readable import
 
